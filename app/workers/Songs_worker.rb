@@ -1,4 +1,5 @@
 class SongsWorker
+  include Sidekiq::Worker
   require 'csv'
 
   def perform(songs_file)
