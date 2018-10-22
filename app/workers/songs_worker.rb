@@ -6,5 +6,6 @@ class SongsWorker
     CSV.foreach(songs_file, headers: true) do |song|
     Song.create(title: song[0])
     Artist.find_or_create_by(name: song[1])
+    end
   end
 end
